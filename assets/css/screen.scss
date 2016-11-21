@@ -1,0 +1,61 @@
+/**
+ * Import all utilities
+ */
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+
+/**
+ * Wrap inside container class to avoid SharePoint conflicts
+ */
+//
+.golin {
+/**
+ * Import vendor CSS files
+ */
+@import 'vendors/normalize';
+
+/**
+ * Import all base files
+ */
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/helpers';
+
+/**
+ * Import all animations
+ */
+@import 'animations/animations';
+
+/**
+ * Import all layout files
+ */
+
+/**
+ * Import all component files
+ */
+@import 'components/button';
+@import 'components/img';
+
+/**
+ * Import page specific files
+ */
+@import 'pages/home';
+
+
+/**
+ * Import print styles (if necessary)
+ */
+@media print {
+
+ }
+
+}
+
+ /**
+ * Import element CSS files that should be applied on the whole page
+ */
+@import 'components/external';
