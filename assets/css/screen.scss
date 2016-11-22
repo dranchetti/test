@@ -6,11 +6,14 @@
 @import 'utils/mixins';
 @import 'utils/placeholders';
 
+@import 'vendors/fabric';
+@import 'vendors/fabriccore';
+
 /**
  * Wrap inside container class to avoid SharePoint conflicts
  */
 //
-.golin {
+.app {
 /**
  * Import vendor CSS files
  */
@@ -38,8 +41,9 @@
  * Import all component files
  */
 @import 'components/button';
-@import 'components/img';
-
+@import 'components/news';
+@import 'components/datePicker';
+@import 'components/newsFilter';
 /**
  * Import page specific files
  */

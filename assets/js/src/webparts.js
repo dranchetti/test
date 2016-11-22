@@ -12,25 +12,21 @@ import $ from 'jquery';
      * Executes webpart initialization
      */
      APP.WEBPARTS.init = function() {
+        SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function() {
             $('.webpart-display').each(function() {
                 var display = $(this).attr('data-display');
                 switch (display.toLowerCase()) {
-                    case 'button-component':
-                    APP.BUTTONWRAPPER.init();
+                    case 'latest-news':
+                    APP.LATESTNEWS.init();
                     break;
-                    case 'increment-component':
-                    APP.INCREMENTWRAPPER.init();
-                    break;
-                    case 'filter-component':
-                    APP.FILTERWRAPPER.init();
-                    break;
-                    case 'document-library-component':
-                    APP.DOCLIBWRAPPER.init();
+                    case 'all-news':
+                    APP.ALLNEWS.init();
                     break;
                     default:
                     break;
                 }
             });
+        });
     };
 
 })(window.APP = window.APP || {});

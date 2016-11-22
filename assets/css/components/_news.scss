@@ -1,0 +1,205 @@
+.newsraw {
+    .no-content {
+
+        color: $dustyGray;
+        font-size: 1.5em;
+        padding: 0 8px 40px 8px;
+    }
+
+    .even {
+        background-color: $concrete;
+        padding: 20px;
+    }
+
+    .ms-Grid {
+        padding-left: $base-spacing / 2;
+        padding-right: $base-spacing / 2;
+
+        @include breakpoint(small) {
+            padding: 0;
+        }
+
+
+        .ms-Grid-row {
+            .ms-Grid-col {
+                padding-bottom: 30px;
+
+                .newsraw-tile {
+                    background-color: white;
+                    border-radius: 10px;
+                    display: block;
+
+                    @include breakpoint(small) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+
+                    .newsraw-image {
+                        flex: 1 0 auto;
+
+                        @include breakpoint(medium) {
+                            flex: 1 0 220px;
+                        }
+
+
+                        @include breakpoint(large) {
+                            flex: 1 0 190px;
+                        }
+
+
+                        @include breakpoint(x-large) {
+                            flex: 1 0 auto;
+                        }
+
+                        img {
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .newsraw-articledate {
+                        color: $curiousBlue;
+                        font-size: 1em;
+                        padding: 0px 15px 0px 15px;
+                    }
+
+                    .newsraw-title {
+                        color: $curiousBlue;
+                        font-size: 1.5em;
+                        padding: 0px 15px 10px 15px;
+                        flex: 1 0 50px;
+
+                        @include breakpoint(small) {
+                            flex: 1 0 50px;
+                        }
+
+
+                        @include breakpoint(x-large) {
+                            flex: 1 0 auto;
+                        }
+
+
+                        a {
+                            color: $curiousBlue;
+
+                            &:hover {
+                                text-decoration: none;
+                                color: $curiousBlue;
+                            }
+                        }
+                    }
+
+                    .newsraw-strapline {
+
+                        color: $base-font-color;
+                        font-size: 1.1em;
+                        padding: 0 15px 20px 15px;
+                        flex: 1 0 70px;
+
+                        @include breakpoint(large) {
+                            flex: 1 0 90px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .newsraw-loadmore-container {
+        text-align: center;
+
+        .newsraw-loadmore-area {
+
+            display: inline-block;
+            background: #004976;
+            border-radius: 37px;
+            padding: 5px 20px 5px 20px;
+            line-height: 22px;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #00395D;
+            }
+
+            img {
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                padding-left: 10px;
+                vertical-align: baseline;
+            }
+        }
+    }
+}
+
+.article {
+    .newsraw {
+        .even {
+            padding-top: 20px;
+        }
+
+        .ms-Grid {
+            .ms-Grid-row {
+                .ms-Grid-col {
+                    .newsraw-tile {
+                        display: block;
+
+                        @include breakpoint(small) {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+
+                        .newsraw-image {
+                            flex: 1 0 auto;
+
+                            @include breakpoint(medium) {
+                                flex: 1 0 220px;
+                            }
+
+
+                            @include breakpoint(large) {
+                                flex: 1 0 190px;
+                            }
+
+
+                            @include breakpoint(x-large) {
+                                flex: 1 0 auto;
+                            }
+
+
+                            &::after {
+                                top: 37%;
+
+                                @include breakpoint(small) {
+                                    top: 48%;
+                                }
+
+
+                                @include breakpoint(medium) {
+                                    top: 36%;
+                                }
+
+
+                                @include breakpoint(large) {
+                                    top: 37%;
+                                }
+
+
+                                @include breakpoint(x-large) {
+                                    top: 49%;
+                                }
+                            }
+                        }
+
+                        .newsraw-strapline {
+                            flex: 1 0 90px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
